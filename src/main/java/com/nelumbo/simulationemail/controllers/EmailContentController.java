@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailContentController {
 
 	
-	//IMPLEMENTAR METODO QUE ENVIE EL EMAIL 
+	//IMPLEMENTAR METODO QUE ENVIE EL EMAIL   
 }
