@@ -11,7 +11,7 @@ public class EmailContentServiceImp implements IEmailContentService {
 	@Override
 	public String sendEmail(EmailContent emailContent) {
 	
-		return null;
+		return "Correo Enviado";
 	}
 
 }
