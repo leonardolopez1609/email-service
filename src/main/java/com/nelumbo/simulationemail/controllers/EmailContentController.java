@@ -2,6 +2,9 @@ package com.nelumbo.simulationemail.controllers;
 
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nelumbo.simulationemail.entities.EmailContent;
+import com.nelumbo.simulationemail.entities.EmailContentDTO;
 import com.nelumbo.simulationemail.services.IEmailContentService;
 
 import jakarta.validation.Valid;
@@ -23,9 +26,11 @@ public class EmailContentController {
 	IEmailContentService emailContentService;
 	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
-	public String sendEmail(@Valid @RequestBody EmailContent emailContent) {
+	public Map<String, Object>sendEmail(@Valid @RequestBody EmailContentDTO emailContent) {
 		
-		return emailContentService.sendEmail(emailContent);
+		Map<String, Object> response = new HashMap<>();
+		response.put("mensaje", emailContentService.sendEmail(emailContent));
+		return response;
 
 		
 	}

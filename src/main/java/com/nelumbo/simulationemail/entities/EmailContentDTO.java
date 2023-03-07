@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class EmailContent {
+public class EmailContentDTO {
 	@NotNull(message = "El email es requerido")
 	@NotBlank(message = "El email es requerido")
 	String email;

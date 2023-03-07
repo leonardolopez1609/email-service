@@ -1,8 +1,8 @@
 package com.nelumbo.simulationemail.services;
 
-import com.nelumbo.simulationemail.entities.EmailContent;
+import com.nelumbo.simulationemail.entities.EmailContentDTO;
 
 public interface IEmailContentService {
 
-	String sendEmail(EmailContent emailContent);
+	String sendEmail(EmailContentDTO emailContent);
 }
