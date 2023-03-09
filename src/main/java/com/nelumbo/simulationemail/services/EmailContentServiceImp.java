@@ -10,7 +10,7 @@ public class EmailContentServiceImp implements IEmailContentService {
 
 	@Override
 	public String sendEmail(EmailContentDTO emailContent) {
-	
+	    emailContent.imp(emailContent.getPlate(),emailContent.getMessage());
 		return "Correo Enviado";
 	}
 
