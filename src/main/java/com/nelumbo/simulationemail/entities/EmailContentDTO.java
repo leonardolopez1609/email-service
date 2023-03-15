@@ -23,6 +23,8 @@ public class EmailContentDTO {
 	Long idparking;
 	
 	public void imp (String plate, String message) {
-		log.info("Placa de correo: "+plate + "--- Mensaje del correo: "+message);
+		log.atWarn().log("Correo: Placa:  "+plate + " --- Mensaje: "+message);;
+		
+		
 	}
 }
